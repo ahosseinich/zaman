@@ -9,7 +9,7 @@ import { YearPickerButton } from '../../style/classNames'
 
 export const YearPicker = (props: YearPickerProps) => {
   const currentYear = parseInt(formatDate(props.value, 'YYYY', 'latn'), 10)
-  const years: number[] = useMemo(() => getYears(props.value), [])
+  const years: number[] = useMemo(() => getYears(props.value, 120, 50), [])
 
   const wrapperRef = React.useCallback((wrapper: HTMLDivElement) => {
     if (wrapper === null) {
